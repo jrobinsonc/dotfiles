@@ -6,12 +6,9 @@ Of course, you are free to use them in any way but please [let me know](https://
 
 > WARNING: Please, don’t just take these settings carte blanche; they work for me but might not be the best for you. Use at your own risk. These dot-files are intended to work under macOS Mojave.
 
-## Requirements
-
-* [git](https://git-scm.com/).
-
 ## Installation
 
+1. Install [Git](https://git-scm.com/).
 1. Install [Homebrew](https://brew.sh/).
 1. Clone this repo and run `bash ./install.sh`.
 
