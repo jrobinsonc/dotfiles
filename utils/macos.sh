@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# Based on:
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# Never go into computer sleep mode
+#sudo systemsetup -setcomputersleep Off > /dev/null
+
+# Always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+# Possible values: `WhenScrolling`, `Automatic` and `Always`
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Save screenshots to the Downloads dir
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+# defaults write com.apple.finder QuitMenuItem -bool true
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+# Restart Finder
+killall Finder /System/Library/CoreServices/Finder.app
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false

@@ -1,0 +1,12 @@
+# Temporary files
+._*
+*~
+
+# Dev files
+.cache
+.history
+
+# Folder configuration files
+Desktop.ini
+.DS_Store
+Thumbs.db
