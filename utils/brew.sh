@@ -33,15 +33,18 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
   chsh -s "${BREW_PREFIX}/bin/bash";
 fi;
 
-# Install `wget`.
-brew install wget
-
 # Install GnuPG to enable PGP-signing commits.
 # brew install gnupg
 
-# Install more recent versions of some macOS tools.
+# Install MySQL client
+brew install mysql-client
+brew link --force mysql-client
+
+# Install more recent versions of some tools.
+brew install wget
 brew install vim
 brew install grep
+brew install lynx
 # brew install openssh
 # brew install screen
 # brew install php
@@ -81,12 +84,11 @@ brew install grep
 
 # Install other useful binaries.
 # brew install ack
-#brew install exiv2
+# brew install exiv2
 # brew install git
 # brew install git-lfs
 # brew install imagemagick --with-webp
 # brew install lua
-brew install lynx
 # brew install p7zip
 # brew install pigz
 # brew install pv
