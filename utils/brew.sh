@@ -45,6 +45,7 @@ brew install wget
 brew install vim
 brew install grep
 brew install lynx
+brew install unrar
 # brew install openssh
 # brew install screen
 # brew install php
