@@ -30,9 +30,13 @@
     excludesfile = ~/.gitignore
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    # For Kaleidoscope:
+    #cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
     path = 
 [mergetool "sourcetree"]
     cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    # For Kaleidoscope:
+    #cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
     trustExitCode = true
 [commit]
     # template = ~/.stCommitMsg
