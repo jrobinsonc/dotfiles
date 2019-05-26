@@ -8,7 +8,6 @@ Of course, you are free to use them in any way but please [let me know](https://
 
 ## Installation
 
-1. Install [Git](https://git-scm.com/).
 1. Install [Homebrew](https://brew.sh/).
 1. Clone this repo and run `bash ./install.sh`.
 
