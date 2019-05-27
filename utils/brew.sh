@@ -86,6 +86,7 @@ brew install unrar
 # Install other useful binaries.
 # brew install ack
 # brew install exiv2
+brew install yarn
 brew install git
 brew install git-lfs
 # brew install imagemagick --with-webp
