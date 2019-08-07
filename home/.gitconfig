@@ -15,7 +15,8 @@
     co = checkout
     df = diff --color -w
     df-last = diff --color HEAD^
-    br = branch -a
+    br = branch -a --no-merged
+    bra = branch -a
     cm = commit -v
     last = log -1 HEAD
     unstage = reset HEAD --
