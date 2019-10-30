@@ -8,7 +8,7 @@
     ui = auto
 [user]
     useConfigOnly = true
-    name = 
+    name = Jose Robinson
     email =
 [alias]
     st = status -sb --show-stash
