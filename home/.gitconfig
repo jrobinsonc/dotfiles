@@ -23,11 +23,11 @@
     vlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen - %cD (%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative -p
     slog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     search = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
-[branch "master"]
-    #mergeoptions = --no-ff
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+    mergeoptions = --no-ff
+    ignorecase = false
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
     # For Kaleidoscope:
