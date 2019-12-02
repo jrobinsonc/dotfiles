@@ -13,6 +13,7 @@
     st = status -sb --show-stash
     co = checkout
     df = diff --color -w
+    df-files = diff --name-status # diff showing only the filenames
     df-last = diff --color HEAD^
     br = branch -a --no-merged
     bra = branch -a
