@@ -34,7 +34,11 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
 fi;
 
 # Install GnuPG to enable PGP-signing commits.
-# brew install gnupg
+brew install gnupg
+# Hack required to use gpg (https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309547412)
+brew install pinentry-mac
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
 
 # Install MySQL client
 brew install mysql-client
