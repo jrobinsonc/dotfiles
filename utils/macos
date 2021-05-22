@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Based on:
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos

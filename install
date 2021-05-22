@@ -1,0 +1,39 @@
+#!/usr/bin/env zsh
+
+YELLOW='\033[1;33m'
+GREEN='\033[1;32m'
+# LCYAN='\033[1;36m'
+NC='\033[0m' # No Color
+
+end_script() {
+  echo $2
+  echo ""
+  exit $1
+}
+
+clear
+
+echo -en "${YELLOW}This may overwrite your existing configuration. Are you sure? ${NC}[y/N] "
+read reply </dev/tty
+
+if ! [[ "$reply" =~ ^[Yy]$ ]]; then
+  end_script 1 "Installation cancelled."
+fi
+
+# Configure GIT
+echo -en "${YELLOW}Configure GIT? ${NC}[y/N] "
+read reply </dev/tty
+
+if [[ "$reply" =~ ^[Yy]$ ]]; then
+  zsh ./utils/git
+fi
+
+rsync -avh ./home/ ~
+
+zsh ./utils/omz
+zsh ./utils/macos
+zsh ./utils/brew
+
+echo ""
+echo -e "${GREEN}Done! ${NC}"
+echo ""
