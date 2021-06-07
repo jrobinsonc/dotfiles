@@ -27,6 +27,7 @@
     st = status -sb --show-stash
     unstage = reset HEAD --
     vlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen - %cD (%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative -p
+    pp = "!sh -c 'git pull --ff && git push'"
 [core]
 	editor = code --wait
     excludesfile = ~/.gitignore
