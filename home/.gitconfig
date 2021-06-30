@@ -27,20 +27,20 @@
     st = status -sb --show-stash
     unstage = reset HEAD --
     vlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen - %cD (%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative -p
-    pp = "!sh -c 'git pull --ff && git push'"
+    sync = "!sh -c 'echo "This action will pull and push commits from and to the remote branch." && git pull --ff && git push'"
 [core]
-	editor = code --wait
+    editor = code --wait
     excludesfile = ~/.gitignore
     mergeoptions = --no-ff
-	ignorecase = false
+    ignorecase = false
 [commit]
 	gpgSign = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
     required = true
 [merge]
-	ff = false
+    ff = false
 [gpg]
-	program = gpg
+    program = gpg
