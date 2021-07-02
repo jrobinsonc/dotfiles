@@ -11,8 +11,8 @@
     name = Jose Robinson
 [alias]
     aa = add --all
-    br = branch -a --no-merged
-    bra = branch -a
+    no-merged = branch -av --no-merged
+    bra = branch -av
     cm = commit -v
     co = checkout
     df = diff --color -w
@@ -34,7 +34,7 @@
     mergeoptions = --no-ff
     ignorecase = false
 [commit]
-	gpgSign = true
+    gpgSign = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
