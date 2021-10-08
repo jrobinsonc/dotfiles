@@ -29,7 +29,7 @@
     vlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen - %cD (%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative -p
     sync = "!sh -c 'echo "This action will pull and push commits from and to the remote branch." && git pull --ff && git push'"
 [core]
-    editor = code --wait
+    # editor = code --wait
     excludesfile = ~/.gitignore
     mergeoptions = --no-ff
     ignorecase = false
