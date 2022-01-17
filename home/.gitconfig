@@ -11,7 +11,8 @@
     name = Jose Robinson
 [alias]
     aa = add --all
-    no-merged = branch -av --no-merged
+    no-merged = branch -v --no-merged
+    br = branch -v
     bra = branch -av
     cm = commit -v
     co = checkout
@@ -45,6 +46,6 @@
 [gpg]
     program = gpg
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [pull]
-	rebase = false
+    rebase = false
