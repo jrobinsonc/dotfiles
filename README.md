@@ -4,7 +4,7 @@ My very personal dot-files.
 
 Of course, you are free to use them in any way but please [let me know](https://github.com/jrobinsonc/dotfiles/issues/new) if you find something wrong or have an improvement you'd like to share.
 
-> WARNING: Please, don’t just take these settings carte blanche; they work for me but might not be the best for you. Use at your own risk. These dot-files are intended to work under macOS Mojave.
+> WARNING: Please, don’t just take these settings carte blanche; they work for me but might not be the best for you. Use at your own risk. These dot-files are intended to work under macOS Sonoma.
 
 ## Installation
 
