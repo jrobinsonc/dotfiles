@@ -6,7 +6,8 @@
 .cache
 .history
 
-# Folder configuration files
+# Other configuration files
 Desktop.ini
 .DS_Store
 Thumbs.db
+.quokka
