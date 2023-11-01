@@ -12,6 +12,6 @@ Of course, you are free to use them in any way but please [let me know](https://
 1. Install [iTerm2](https://iterm2.com/index.html).
 1. Install [Oh My Zsh](https://ohmyz.sh/#install).
 1. Install [Cobalt2](https://github.com/wesbos/Cobalt2-iterm).
-1. Clone this repo and run `bash ./install.sh`.
+1. Clone this repo and run `source ./install`.
 
 You can run the same file `./install` to update your configuration with the latest in the repo. And that also will update your brew's formulae.
