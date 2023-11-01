@@ -1,51 +1,51 @@
 [push]
-    default = simple
+	default = simple
 [color]
-    branch = auto
-    diff = auto
-    interactive = auto
-    status = auto
-    ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
 [user]
-    useConfigOnly = true
-    name = Jose Robinson
+	useConfigOnly = true
+	name = Jose Robinson
 [alias]
-    aa = add --all
-    no-merged = branch -v --no-merged
-    br = branch -v
-    bra = branch -av
-    cm = commit -v
-    co = checkout
-    df = diff --color -w
-    df-files = diff --name-status # diff showing only the filenames
-    df-last = diff --color HEAD^
-    fap = fetch --all --prune
-    flog = log --color --name-only --pretty='\n%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
-    last = log -1 HEAD
-    puff = pull --ff
-    search = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
-    slog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    st = status -sb --show-stash
-    unstage = reset HEAD --
-    vlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen - %cD (%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative -p
-    sync = "!sh -c 'echo "This action will pull and push commits from and to the remote branch." && git pull --ff && git push'"
+	aa = add --all
+	no-merged = branch --no-merged
+	br = branch -v
+	bra = branch -av
+	cm = commit -v
+	co = checkout
+	df = diff --color -w
+	df-files = diff --name-status # diff showing only the filenames
+	df-last = diff --color HEAD^
+	fap = fetch --all --prune
+	flog = log --color --name-only --pretty='\n%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
+	last = log -1 HEAD
+	puff = pull --ff
+	search = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
+	slog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	st = status -sb --show-stash
+	unstage = reset HEAD --
+	vlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen - %cD (%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative -p
+	sync = "!sh -c 'echo "This action will pull and push commits from and to the remote branch." && git pull --ff && git push'"
 [core]
-    # editor = code --wait
-    excludesfile = ~/.gitignore
-    mergeoptions = --no-ff
-    ignorecase = false
+	# editor = code --wait
+	excludesfile = ~/.gitignore
+	mergeoptions = --no-ff # --no-ff: ensures that a new merge commit is always created, even when a fast-forward merge could have been performed
+	ignorecase = false
 [commit]
-    gpgSign = true
+	gpgSign = true
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [merge]
-    ff = false
+	ff = false
 [gpg]
-    program = gpg
+	program = gpg
 [init]
-    defaultBranch = main
+	defaultBranch = main
 [pull]
-    rebase = false
+	rebase = false
