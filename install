@@ -25,14 +25,13 @@ echo -en "${YELLOW}Configure GIT? ${NC}[y/N] "
 read reply </dev/tty
 
 if [[ "$reply" =~ ^[Yy]$ ]]; then
-  zsh ./utils/git
+  source ./utils/git
 fi
 
 rsync -avh ./home/ ~
 
-zsh ./utils/omz
-zsh ./utils/macos
-zsh ./utils/brew
+source ./utils/macos
+source ./utils/brew
 
 echo ""
 echo -e "${GREEN}Done! ${NC}"
