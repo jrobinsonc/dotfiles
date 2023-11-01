@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-
-# Install Cobalt2 for iTerm2 and ZSH
-curl https://raw.githubusercontent.com/wesbos/Cobalt2-iterm/master/cobalt2.zsh-theme --output ~/.oh-my-zsh/themes/cobalt2.zsh-theme
