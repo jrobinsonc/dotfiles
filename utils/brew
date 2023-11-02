@@ -28,7 +28,7 @@ brew install gnupg
 # Hack required to use gpg (https://github.com/Homebrew/homebrew-core/issues/14737#issuecomment-309547412)
 if brew list pinentry-mac 2>&1 | grep -q "No such keg"; then 
   mkdir ~/.gnupg
-  echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+  echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 fi
 brew install pinentry-mac
 killall gpg-agent
