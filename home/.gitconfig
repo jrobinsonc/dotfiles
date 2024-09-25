@@ -9,15 +9,16 @@
 [user]
 	useConfigOnly = true
 	name = Jose Robinson
+	email = 
 [alias]
 	aa = add --all
-	no-merged = branch --no-merged
+	no-merged = branch -v --no-merged
 	br = branch -v
 	bra = branch -av
 	cm = commit -v
 	co = checkout
 	df = diff --color -w
-	df-files = diff --name-status # diff showing only the filenames
+	df-files = diff --name-status
 	df-last = diff --color HEAD^
 	fap = fetch --all --prune
 	flog = log --color --name-only --pretty='\n%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
@@ -30,9 +31,9 @@
 	vlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen - %cD (%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative -p
 	sync = "!sh -c 'echo "This action will pull and push commits from and to the remote branch." && git pull --ff && git push'"
 [core]
-	# editor = code --wait
+	editor = vim
 	excludesfile = ~/.gitignore
-	mergeoptions = --no-ff # --no-ff: ensures that a new merge commit is always created, even when a fast-forward merge could have been performed
+	mergeoptions = --no-ff
 	ignorecase = false
 [commit]
 	gpgSign = true
