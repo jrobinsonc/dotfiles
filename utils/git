@@ -1,31 +1,17 @@
 #!/usr/bin/env zsh
 
-configure_git() {
-  local actual_user_name="$1"
-  local actual_user_email="$2"
+set_git_config() {
+  local label="$1"
+  local config_key="$2"
+  local current_value=$(git config --global "$config_key")
+  local input_value
 
-  echo ""
+  echo -en "${YELLOW}What's your $label? ${NC}[$current_value] "
+  read input_value </dev/tty
 
-  echo -en "${YELLOW}What's your name? ${NC}[$actual_user_name] "
-  read user_name </dev/tty
-
-  if [ "$user_name" = "" ]; then
-    user_name=$actual_user_name
-  fi
-  
-  git config --global user.name "$user_name"
-
-  echo -en "${YELLOW}What's your email? ${NC}[$actual_user_email] "
-  read user_email </dev/tty
-
-  if [ "$user_email" = "" ]; then
-    user_email=$actual_user_email
-  fi
-
-  git config --global user.email "$user_email"
+  git config --global "$config_key" "${input_value:-$current_value}"
 }
 
-actual_user_name=`git config --global user.name`
-actual_user_email=`git config --global user.email`
-
-configure_git "$actual_user_name" "$actual_user_email"
+echo ""
+set_git_config "name" "user.name"
+set_git_config "email" "user.email"
